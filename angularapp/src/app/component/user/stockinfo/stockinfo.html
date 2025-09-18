@@ -1,0 +1,214 @@
+<!-- Animated Background -->
+<div class="animated-bg">
+  <div class="floating-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+    <div class="shape shape-5"></div>
+  </div>
+  <div class="grid-overlay"></div>
+</div>
+
+<!-- Top Navigation Bar -->
+<header class="header">
+  <div class="logo">
+    <div class="logo-icon">
+      <div class="stock-logo">
+        <div class="logo-3d-container">
+          <div class="chart-bars-3d">
+            <div class="bar-3d bar-1">
+              <div class="bar-face front"></div>
+              <div class="bar-face back"></div>
+              <div class="bar-face left"></div>
+              <div class="bar-face right"></div>
+              <div class="bar-face top"></div>
+              <div class="bar-face bottom"></div>
+            </div>
+            <div class="bar-3d bar-2">
+              <div class="bar-face front"></div>
+              <div class="bar-face back"></div>
+              <div class="bar-face left"></div>
+              <div class="bar-face right"></div>
+              <div class="bar-face top"></div>
+              <div class="bar-face bottom"></div>
+            </div>
+            <div class="bar-3d bar-3">
+              <div class="bar-face front"></div>
+              <div class="bar-face back"></div>
+              <div class="bar-face left"></div>
+              <div class="bar-face right"></div>
+              <div class="bar-face top"></div>
+              <div class="bar-face bottom"></div>
+            </div>
+            <div class="bar-3d bar-4">
+              <div class="bar-face front"></div>
+              <div class="bar-face back"></div>
+              <div class="bar-face left"></div>
+              <div class="bar-face right"></div>
+              <div class="bar-face top"></div>
+              <div class="bar-face bottom"></div>
+            </div>
+          </div>
+          <div class="trend-line-3d"></div>
+          <div class="pulse-ring-3d"></div>
+          <div class="glow-effect"></div>
+        </div>
+      </div>
+      <div class="logo-text">StockPulse</div>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><button class="nav-btn" (click)="navigateToLanding()">Home</button></li>
+      <li><button class="nav-btn" (click)="navigateToUserHome()">Dashboard</button></li>
+      <li><button class="nav-btn">Profile</button></li>
+      <li><button class="nav-btn">Settings</button></li>
+    </ul>
+  </nav>
+  <button class="futuristic-btn">
+    <span class="btn-text">Logout</span>
+    <div class="btn-glow"></div>
+  </button>
+</header>
+
+<!-- Sub Navigation Bar -->
+<nav class="sub-nav">
+  <div class="sub-nav-container">
+    <ul class="sub-nav-list">
+      <li class="sub-nav-item">
+        <button class="sub-nav-btn active">
+          <div class="btn-icon">📊</div>
+          <span class="btn-text">Stock Info</span>
+          <div class="btn-glow"></div>
+        </button>
+      </li>
+      <li class="sub-nav-item">
+        <button class="sub-nav-btn" (click)="navigateToStockHistory()">
+          <div class="btn-icon">📈</div>
+          <span class="btn-text">Stock History</span>
+          <div class="btn-glow"></div>
+        </button>
+      </li>
+      <li class="sub-nav-item">
+        <button class="sub-nav-btn" (click)="navigateToWatchlist()">
+          <div class="btn-icon">⭐</div>
+          <span class="btn-text">Watchlist</span>
+          <div class="btn-glow"></div>
+        </button>
+      </li>
+      <li class="sub-nav-item">
+        <button class="sub-nav-btn" (click)="navigateToAlert()">
+          <div class="btn-icon">🔔</div>
+          <span class="btn-text">Alert</span>
+          <div class="btn-glow"></div>
+        </button>
+      </li>
+      <li class="sub-nav-item">
+        <button class="sub-nav-btn" (click)="navigateToReport()">
+          <div class="btn-icon">📋</div>
+          <span class="btn-text">Report</span>
+          <div class="btn-glow"></div>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content Area -->
+<main class="main-content">
+  <div class="page-header">
+    <h1 class="page-title">Stock Information</h1>
+    <p class="page-subtitle">Real-time stock data and market information</p>
+  </div>
+
+  <!-- Stock Data Table -->
+  <div class="stock-table-container">
+    <div class="table-header">
+      <h2>Market Overview</h2>
+      <div class="live-indicator">
+        <div class="status-dot"></div>
+        <span>LIVE DATA</span>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="stock-table">
+        <thead>
+          <tr>
+            <th>Stock Symbol</th>
+            <th>Company Name</th>
+            <th>Current Price</th>
+            <th>Market</th>
+            <th>Status</th>
+            <th>Change</th>
+            <th>Change %</th>
+            <th>Volume</th>
+            <th>Market Cap</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stock of stockData" class="stock-row">
+            <td class="symbol-cell">
+              <div class="symbol-badge">{{ stock.symbol }}</div>
+            </td>
+            <td class="company-cell">
+              <div class="company-name">{{ stock.companyName }}</div>
+            </td>
+            <td class="price-cell">
+              <div class="price-value">${{ stock.currentPrice | number:'1.2-2' }}</div>
+            </td>
+            <td class="market-cell">
+              <div class="market-badge">{{ stock.market }}</div>
+            </td>
+            <td class="status-cell">
+              <div class="status-badge" [ngClass]="getStatusClass(stock.status)">
+                {{ stock.status }}
+              </div>
+            </td>
+            <td class="change-cell">
+              <div class="change-value" [ngClass]="getChangeClass(stock.change)">
+                {{ stock.change >= 0 ? '+' : '' }}{{ stock.change | number:'1.2-2' }}
+              </div>
+            </td>
+            <td class="change-percent-cell">
+              <div class="change-percent" [ngClass]="getChangeClass(stock.change)">
+                {{ stock.changePercent >= 0 ? '+' : '' }}{{ stock.changePercent | number:'1.2-2' }}%
+              </div>
+            </td>
+            <td class="volume-cell">
+              <div class="volume-value">{{ stock.volume | number }}</div>
+            </td>
+            <td class="market-cap-cell">
+              <div class="market-cap-value">${{ stock.marketCap }}</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Info Cards -->
+  <div class="info-cards">
+    <div class="info-card">
+      <div class="card-icon">📊</div>
+      <h3>Market Summary</h3>
+      <p>Real-time market data and analysis</p>
+      <div class="card-glow"></div>
+    </div>
+    
+    <div class="info-card">
+      <div class="card-icon">📈</div>
+      <h3>Price Charts</h3>
+      <p>Interactive charts and technical analysis</p>
+      <div class="card-glow"></div>
+    </div>
+    
+    <div class="info-card">
+      <div class="card-icon">⚡</div>
+      <h3>Live Updates</h3>
+      <p>Instant price updates and notifications</p>
+      <div class="card-glow"></div>
+    </div>
+  </div>
+</main>

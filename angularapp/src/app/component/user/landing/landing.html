@@ -1,0 +1,696 @@
+<!-- Animated Background -->
+<div class="animated-bg">
+  <div class="floating-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+    <div class="shape shape-5"></div>
+  </div>
+  <div class="grid-overlay"></div>
+</div>
+
+<header class="header">
+  <div class="logo">
+    <div class="logo-icon">
+      <div class="stock-logo">
+        <div class="logo-3d-container">
+          <div class="chart-bars-3d">
+            <div class="bar-3d bar-1">
+              <div class="bar-face front"></div>
+              <div class="bar-face back"></div>
+              <div class="bar-face left"></div>
+              <div class="bar-face right"></div>
+              <div class="bar-face top"></div>
+              <div class="bar-face bottom"></div>
+            </div>
+            <div class="bar-3d bar-2">
+              <div class="bar-face front"></div>
+              <div class="bar-face back"></div>
+              <div class="bar-face left"></div>
+              <div class="bar-face right"></div>
+              <div class="bar-face top"></div>
+              <div class="bar-face bottom"></div>
+            </div>
+            <div class="bar-3d bar-3">
+              <div class="bar-face front"></div>
+              <div class="bar-face back"></div>
+              <div class="bar-face left"></div>
+              <div class="bar-face right"></div>
+              <div class="bar-face top"></div>
+              <div class="bar-face bottom"></div>
+            </div>
+            <div class="bar-3d bar-4">
+              <div class="bar-face front"></div>
+              <div class="bar-face back"></div>
+              <div class="bar-face left"></div>
+              <div class="bar-face right"></div>
+              <div class="bar-face top"></div>
+              <div class="bar-face bottom"></div>
+            </div>
+          </div>
+          <div class="trend-line-3d"></div>
+          <div class="pulse-ring-3d"></div>
+          <div class="glow-effect"></div>
+        </div>
+      </div>
+      <div class="logo-text">StockPulse</div>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><button class="nav-btn" (click)="onHome()">Home</button></li>
+      <li><button class="nav-btn" (click)="onLogin()">Login</button></li>
+      <li><button class="nav-btn" (click)="onRegister()">Register</button></li>
+      <li><button class="nav-btn" (click)="onContact()">Contact</button></li>
+    </ul>
+  </nav>
+  <button class="futuristic-btn" (click)="onGetStarted()">
+    <span class="btn-text">Get Started</span>
+    <div class="btn-glow"></div>
+  </button>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-text">🚀 Next-Gen Trading Platform</span>
+        <div class="badge-glow"></div>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">Invest in the</span>
+        <span class="title-line highlight">
+          <span class="highlight-text">Future</span>
+          <div class="highlight-glow"></div>
+        </span>
+        <span class="title-line">of Finance</span>
+      </h1>
+      <p class="hero-description">
+        Experience AI-powered trading with zero commission, real-time analytics, and advanced portfolio management. 
+        Join millions of traders who trust StockPulse for their investment journey.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number" data-count="10">0</div>
+          <div class="stat-label">Million+ Users</div>
+          <div class="stat-glow"></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="50">0</div>
+          <div class="stat-label">K+ Avg Portfolio</div>
+          <div class="stat-glow"></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="99">0</div>
+          <div class="stat-label">.9% Uptime</div>
+          <div class="stat-glow"></div>
+        </div>
+      </div>
+      <div class="hero-features">
+        <div class="feature-tag">
+          <div class="tag-icon">⚡</div>
+          <span>Zero Commission</span>
+        </div>
+        <div class="feature-tag">
+          <div class="tag-icon">🔒</div>
+          <span>Bank-Grade Security</span>
+        </div>
+        <div class="feature-tag">
+          <div class="tag-icon">🤖</div>
+          <span>AI-Powered</span>
+        </div>
+      </div>
+      
+    </div>
+  <div class="hero-visual">
+    <div class="trading-visualization">
+      <!-- Main Trading Animation -->
+      <div class="trading-animation-container">
+        <div class="animation-header">
+          <h3>Real-Time Trading Analytics</h3>
+          <div class="live-status">
+            <div class="status-dot"></div>
+            <span>LIVE DATA</span>
+          </div>
+        </div>
+        
+        <!-- Animated Trading Scene -->
+        <div class="trading-scene">
+          <!-- Central Chart -->
+          <div class="central-chart">
+            <div class="chart-background">
+              <div class="grid-lines">
+                <div class="grid-line"></div>
+                <div class="grid-line"></div>
+                <div class="grid-line"></div>
+                <div class="grid-line"></div>
+                <div class="grid-line"></div>
+              </div>
+            </div>
+            
+            <!-- Animated Price Line -->
+            <svg class="price-chart" viewBox="0 0 400 200">
+              <defs>
+                <linearGradient id="chartGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                  <stop offset="50%" style="stop-color:#ff006e;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:1" />
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                  <feMerge> 
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+              
+              <path d="M0,150 Q50,120 100,100 T200,80 T300,60 T400,40" 
+                    stroke="url(#chartGradient)" 
+                    stroke-width="4" 
+                    fill="none"
+                    filter="url(#glow)"
+                    class="animated-line">
+                <animate attributeName="stroke-dasharray" 
+                         values="0,1000;1000,0" 
+                         dur="3s" 
+                         begin="0s" 
+                         fill="freeze"/>
+              </path>
+              
+              <!-- Data Points -->
+              <circle cx="50" cy="120" r="4" fill="#00d4ff" class="data-point">
+                <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="150" cy="80" r="4" fill="#ff006e" class="data-point">
+                <animate attributeName="r" values="4;8;4" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="250" cy="60" r="4" fill="#00d4ff" class="data-point">
+                <animate attributeName="r" values="4;8;4" dur="2s" begin="1s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="350" cy="40" r="4" fill="#ff006e" class="data-point">
+                <animate attributeName="r" values="4;8;4" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+          </div>
+          
+          <!-- Floating Data Elements -->
+          <div class="floating-data">
+            <div class="data-bubble bubble-1">
+              <div class="bubble-content">
+                <div class="bubble-label">NIFTY 50</div>
+                <div class="bubble-value">₹24,850</div>
+                <div class="bubble-change positive">+0.51%</div>
+              </div>
+            </div>
+            
+            <div class="data-bubble bubble-2">
+              <div class="bubble-content">
+                <div class="bubble-label">SENSEX</div>
+                <div class="bubble-value">₹81,500</div>
+                <div class="bubble-change positive">+0.55%</div>
+              </div>
+            </div>
+            
+            <div class="data-bubble bubble-3">
+              <div class="bubble-content">
+                <div class="bubble-label">RELIANCE</div>
+                <div class="bubble-value">₹2,850</div>
+                <div class="bubble-change negative">-0.89%</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Trading Indicators -->
+          <div class="trading-indicators">
+            <div class="indicator buy-indicator">
+              <div class="indicator-icon">↗</div>
+              <div class="indicator-text">BUY</div>
+            </div>
+            <div class="indicator sell-indicator">
+              <div class="indicator-icon">↘</div>
+              <div class="indicator-text">SELL</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <h2>How StockPulse Works</h2>
+      <p>Simple steps to start your trading journey</p>
+    </div>
+    
+    <div class="steps-container">
+      <div class="step-item">
+        <div class="step-number">
+          <span>01</span>
+          <div class="step-glow"></div>
+        </div>
+        <div class="step-content">
+          <h3>Create Your Account</h3>
+          <p>Sign up in minutes with your email and phone number. Complete KYC verification for secure trading.</p>
+          <div class="step-features">
+            <div class="step-feature">
+              <div class="feature-icon">📧</div>
+              <span>Email Verification</span>
+            </div>
+            <div class="step-feature">
+              <div class="feature-icon">📱</div>
+              <span>Phone Verification</span>
+            </div>
+            <div class="step-feature">
+              <div class="feature-icon">🆔</div>
+              <span>KYC Documents</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-animation">
+          <div class="animation-circle">
+            <div class="circle-dot"></div>
+            <div class="circle-dot"></div>
+            <div class="circle-dot"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="step-item">
+        <div class="step-number">
+          <span>02</span>
+          <div class="step-glow"></div>
+        </div>
+        <div class="step-content">
+          <h3>Fund Your Account</h3>
+          <p>Add money to your trading account using UPI, net banking, or debit card. Start with as low as ₹500.</p>
+          <div class="step-features">
+            <div class="step-feature">
+              <div class="feature-icon">💳</div>
+              <span>UPI Transfer</span>
+            </div>
+            <div class="step-feature">
+              <div class="feature-icon">🏦</div>
+              <span>Net Banking</span>
+            </div>
+            <div class="step-feature">
+              <div class="feature-icon">💳</div>
+              <span>Debit Card</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-animation">
+          <div class="money-flow">
+            <div class="money-icon">💰</div>
+            <div class="flow-line"></div>
+            <div class="money-icon">📈</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="step-item">
+        <div class="step-number">
+          <span>03</span>
+          <div class="step-glow"></div>
+        </div>
+        <div class="step-content">
+          <h3>Start Trading</h3>
+          <p>Access real-time market data, use AI insights, and execute trades with zero commission fees.</p>
+          <div class="step-features">
+            <div class="step-feature">
+              <div class="feature-icon">📊</div>
+              <span>Live Charts</span>
+            </div>
+            <div class="step-feature">
+              <div class="feature-icon">🤖</div>
+              <span>AI Insights</span>
+            </div>
+            <div class="step-feature">
+              <div class="feature-icon">⚡</div>
+              <span>Instant Execution</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-animation">
+          <div class="trading-animation">
+            <div class="chart-mini">
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+              <div class="mini-bar"></div>
+            </div>
+            <div class="profit-indicator">+₹1,250</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Guidelines Section -->
+<section class="guidelines">
+  <div class="container">
+    <div class="section-header">
+      <h2>Trading Guidelines & Best Practices</h2>
+      <p>Essential tips for successful trading on StockPulse</p>
+    </div>
+    
+    <div class="guidelines-grid">
+      <div class="guideline-card">
+        <div class="guideline-icon">
+          <div class="icon-3d">
+            <div class="icon-face front">📚</div>
+            <div class="icon-face back">🎓</div>
+            <div class="icon-face left">💡</div>
+            <div class="icon-face right">📖</div>
+          </div>
+        </div>
+        <h3>Learn Before You Trade</h3>
+        <p>Understand market basics, technical analysis, and risk management before making your first trade.</p>
+        <ul class="guideline-list">
+          <li>Study market trends and patterns</li>
+          <li>Learn about different asset classes</li>
+          <li>Understand risk-reward ratios</li>
+          <li>Practice with virtual trading</li>
+        </ul>
+      </div>
+      
+      <div class="guideline-card">
+        <div class="guideline-icon">
+          <div class="icon-3d">
+            <div class="icon-face front">💰</div>
+            <div class="icon-face back">💎</div>
+            <div class="icon-face left">🎯</div>
+            <div class="icon-face right">📊</div>
+          </div>
+        </div>
+        <h3>Start Small & Scale Up</h3>
+        <p>Begin with small investments and gradually increase as you gain experience and confidence.</p>
+        <ul class="guideline-list">
+          <li>Start with ₹500-1000 investments</li>
+          <li>Diversify your portfolio</li>
+          <li>Set realistic profit targets</li>
+          <li>Track your performance</li>
+        </ul>
+      </div>
+      
+      <div class="guideline-card">
+        <div class="guideline-icon">
+          <div class="icon-3d">
+            <div class="icon-face front">🛡️</div>
+            <div class="icon-face back">🔒</div>
+            <div class="icon-face left">⚠️</div>
+            <div class="icon-face right">🚨</div>
+          </div>
+        </div>
+        <h3>Risk Management</h3>
+        <p>Never invest more than you can afford to lose. Use stop-loss orders and position sizing.</p>
+        <ul class="guideline-list">
+          <li>Set stop-loss orders</li>
+          <li>Never invest more than 5% in one stock</li>
+          <li>Keep emergency funds separate</li>
+          <li>Review and adjust strategies</li>
+        </ul>
+      </div>
+      
+      <div class="guideline-card">
+        <div class="guideline-icon">
+          <div class="icon-3d">
+            <div class="icon-face front">📱</div>
+            <div class="icon-face back">💻</div>
+            <div class="icon-face left">🔔</div>
+            <div class="icon-face right">📈</div>
+          </div>
+        </div>
+        <h3>Stay Informed</h3>
+        <p>Keep up with market news, company earnings, and economic indicators that affect your investments.</p>
+        <ul class="guideline-list">
+          <li>Follow market news daily</li>
+          <li>Set price alerts</li>
+          <li>Monitor company earnings</li>
+          <li>Track economic indicators</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="safety-notice">
+      <div class="notice-icon">⚠️</div>
+      <div class="notice-content">
+        <h4>Important Safety Notice</h4>
+        <p>Trading involves risk. Past performance doesn't guarantee future results. Only invest money you can afford to lose. Consider consulting with a financial advisor before making investment decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Information Section -->
+<section class="project-info">
+  <div class="container">
+    <div class="section-header">
+      <h2>About StockPulse</h2>
+      <p>Revolutionizing the way you trade and invest</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <div class="icon-3d">
+            <div class="icon-face front">📊</div>
+            <div class="icon-face back">📈</div>
+            <div class="icon-face left">💰</div>
+            <div class="icon-face right">🎯</div>
+          </div>
+        </div>
+        <h3>Real-Time Analytics</h3>
+        <p>Get instant access to live market data, advanced charting tools, and AI-powered insights to make informed trading decisions.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <div class="icon-3d">
+            <div class="icon-face front">🔒</div>
+            <div class="icon-face back">🛡️</div>
+            <div class="icon-face left">🔐</div>
+            <div class="icon-face right">⚡</div>
+          </div>
+        </div>
+        <h3>Secure & Fast</h3>
+        <p>Bank-grade security with lightning-fast execution. Your investments are protected with advanced encryption and real-time monitoring.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <div class="icon-3d">
+            <div class="icon-face front">🤖</div>
+            <div class="icon-face back">🧠</div>
+            <div class="icon-face left">📱</div>
+            <div class="icon-face right">🚀</div>
+          </div>
+        </div>
+        <h3>AI-Powered Trading</h3>
+        <p>Leverage machine learning algorithms and automated trading strategies to optimize your portfolio performance.</p>
+      </div>
+    </div>
+    
+    <div class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">10M+</div>
+          <div class="stat-label">Active Users</div>
+          <div class="stat-description">Growing community of successful traders</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">₹50K+</div>
+          <div class="stat-label">Average Portfolio</div>
+          <div class="stat-description">Strong investor confidence</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">99.9%</div>
+          <div class="stat-label">Uptime</div>
+          <div class="stat-description">Reliable trading platform</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Support</div>
+          <div class="stat-description">Always here to help</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="technology-section">
+      <h3>Powered by Advanced Technology</h3>
+      <div class="tech-stack">
+        <div class="tech-item">
+          <div class="tech-icon">⚡</div>
+          <span>High-Frequency Trading</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">🧠</div>
+          <span>Machine Learning</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">🔗</div>
+          <span>Blockchain Security</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">☁️</div>
+          <span>Cloud Infrastructure</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">📊</div>
+          <span>Big Data Analytics</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">🔒</div>
+          <span>End-to-End Encryption</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+    <div class="contact-header">
+      <h2>Get in Touch</h2>
+      <p>Have questions? We're here to help you succeed in your trading journey</p>
+      <div class="contact-indicator">
+        <div class="indicator-dot"></div>
+        <span>24/7 Support Available</span>
+      </div>
+    </div>
+    
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <h3>Phone Support</h3>
+          <p>Speak directly with our support team</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-label">General Support:</span>
+              <span class="contact-value">+91 98765 43210</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Trading Issues:</span>
+              <span class="contact-value">+91 98765 43211</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Hours:</span>
+              <span class="contact-value">24/7 Available</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">📧</div>
+          <h3>Email Support</h3>
+          <p>Get detailed assistance via email</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-label">General:</span>
+              <span class="contact-value">support@stockpulse.com</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Technical:</span>
+              <span class="contact-value">tech@stockpulse.com</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Business:</span>
+              <span class="contact-value">business@stockpulse.com</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">💬</div>
+          <h3>Live Chat</h3>
+          <p>Instant help when you need it</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-label">WhatsApp:</span>
+              <span class="contact-value">+91 98765 43210</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Live Chat:</span>
+              <span class="contact-value">Available 24/7</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Response Time:</span>
+              <span class="contact-value">< 2 minutes</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">🏢</div>
+          <h3>Office Address</h3>
+          <p>Visit our headquarters</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-label">Address:</span>
+              <span class="contact-value">StockPulse Technologies Pvt Ltd<br>Tower A, Cyber City<br>Gurgaon, Haryana 122002</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Hours:</span>
+              <span class="contact-value">Mon-Fri: 9AM-6PM<br>Sat: 10AM-4PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <h3>Send us a Message</h3>
+        <form class="message-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Full Name</label>
+              <input type="text" id="contactName" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" placeholder="Enter your email" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <select id="contactSubject" required>
+              <option value="">Select a subject</option>
+              <option value="general">General Inquiry</option>
+              <option value="technical">Technical Support</option>
+              <option value="trading">Trading Issues</option>
+              <option value="account">Account Support</option>
+              <option value="business">Business Partnership</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" placeholder="Tell us how we can help you..." rows="5" required></textarea>
+          </div>
+          
+          <button type="submit" class="contact-submit-btn">
+            <span class="btn-text">Send Message</span>
+            <div class="btn-arrow">→</div>
+            <div class="btn-glow"></div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 StockPulse. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Support</a>
+    </div>
+  </div>
+</footer>

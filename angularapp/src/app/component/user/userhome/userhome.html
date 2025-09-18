@@ -1,0 +1,147 @@
+<!-- Animated Background -->
+<div class="animated-bg">
+  <div class="floating-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+    <div class="shape shape-5"></div>
+  </div>
+  <div class="grid-overlay"></div>
+</div>
+
+<!-- Top Navigation Bar -->
+<header class="header">
+  <div class="logo">
+    <div class="logo-icon">
+      <div class="stock-logo">
+        <div class="logo-3d-container">
+          <div class="chart-bars-3d">
+            <div class="bar-3d bar-1">
+              <div class="bar-face front"></div>
+              <div class="bar-face back"></div>
+              <div class="bar-face left"></div>
+              <div class="bar-face right"></div>
+              <div class="bar-face top"></div>
+              <div class="bar-face bottom"></div>
+            </div>
+            <div class="bar-3d bar-2">
+              <div class="bar-face front"></div>
+              <div class="bar-face back"></div>
+              <div class="bar-face left"></div>
+              <div class="bar-face right"></div>
+              <div class="bar-face top"></div>
+              <div class="bar-face bottom"></div>
+            </div>
+            <div class="bar-3d bar-3">
+              <div class="bar-face front"></div>
+              <div class="bar-face back"></div>
+              <div class="bar-face left"></div>
+              <div class="bar-face right"></div>
+              <div class="bar-face top"></div>
+              <div class="bar-face bottom"></div>
+            </div>
+            <div class="bar-3d bar-4">
+              <div class="bar-face front"></div>
+              <div class="bar-face back"></div>
+              <div class="bar-face left"></div>
+              <div class="bar-face right"></div>
+              <div class="bar-face top"></div>
+              <div class="bar-face bottom"></div>
+            </div>
+          </div>
+          <div class="trend-line-3d"></div>
+          <div class="pulse-ring-3d"></div>
+          <div class="glow-effect"></div>
+        </div>
+      </div>
+      <div class="logo-text">StockPulse</div>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><button class="nav-btn" (click)="navigateToLanding()">Home</button></li>
+      <li><button class="nav-btn">Profile</button></li>
+      <li><button class="nav-btn">Settings</button></li>
+      <li><button class="nav-btn">Help</button></li>
+    </ul>
+  </nav>
+  <button class="futuristic-btn">
+    <span class="btn-text">Logout</span>
+    <div class="btn-glow"></div>
+  </button>
+</header>
+
+<!-- Sub Navigation Bar -->
+<nav class="sub-nav">
+  <div class="sub-nav-container">
+    <ul class="sub-nav-list">
+      <li class="sub-nav-item">
+        <button class="sub-nav-btn" (click)="navigateToStockInfo()">
+          <div class="btn-icon">📊</div>
+          <span class="btn-text">Stock Info</span>
+          <div class="btn-glow"></div>
+        </button>
+      </li>
+      <li class="sub-nav-item">
+        <button class="sub-nav-btn" (click)="navigateToStockHistory()">
+          <div class="btn-icon">📈</div>
+          <span class="btn-text">Stock History</span>
+          <div class="btn-glow"></div>
+        </button>
+      </li>
+      <li class="sub-nav-item">
+        <button class="sub-nav-btn" (click)="navigateToWatchlist()">
+          <div class="btn-icon">⭐</div>
+          <span class="btn-text">Watchlist</span>
+          <div class="btn-glow"></div>
+        </button>
+      </li>
+      <li class="sub-nav-item">
+        <button class="sub-nav-btn" (click)="navigateToAlert()">
+          <div class="btn-icon">🔔</div>
+          <span class="btn-text">Alert</span>
+          <div class="btn-glow"></div>
+        </button>
+      </li>
+      <li class="sub-nav-item">
+        <button class="sub-nav-btn" (click)="navigateToReport()">
+          <div class="btn-icon">📋</div>
+          <span class="btn-text">Report</span>
+          <div class="btn-glow"></div>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content Area -->
+<main class="main-content">
+  <div class="welcome-section">
+    <h1 class="welcome-title">Welcome to StockPulse Dashboard</h1>
+    <p class="welcome-subtitle">Your comprehensive trading and investment platform</p>
+    
+    <div class="dashboard-cards">
+      <div class="dashboard-card">
+        <div class="card-icon">📊</div>
+        <h3>Portfolio Overview</h3>
+        <p>Track your investments and performance</p>
+        <div class="card-glow"></div>
+      </div>
+      
+      <div class="dashboard-card">
+        <div class="card-icon">📈</div>
+        <h3>Market Analysis</h3>
+        <p>Real-time market data and insights</p>
+        <div class="card-glow"></div>
+      </div>
+      
+      <div class="dashboard-card">
+        <div class="card-icon">⚡</div>
+        <h3>Quick Actions</h3>
+        <p>Execute trades and manage positions</p>
+        <div class="card-glow"></div>
+      </div>
+    </div>
+  </div>
+</main>
